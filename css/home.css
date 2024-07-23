@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+#Container {
+    width: 1200px; /* 너비를 고정해야 가운데 정렬 가능 */
+    margin: 0 auto; /* 가운데 정렬 */
+    background-color: #fff;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+
+#Logo {
+    width: 250px;
+    height: 100px;
+    padding-left: 20px;
+    --line-height: 50px;
+    float: left;
+}
+
+#Logo h1 {
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Merienda', cursive;
+}
+
+    /* 네비게이션 */
+    nav {
+        width: 900px;
+        height: 100%;
+        float: right;
+        padding-top: 25px;
+    }
+
+        #TopMenu {
+            height: 100%;
+            list-style-type: none;
+        }
+
+        #TopMenu li {
+            float: right;
+        }
+
+        #TopMenu>li>.sign {
+            font-size: 1.1em;
+            font-weight: 600;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 20px;
+        }
+            #TopMenu>li>.in {
+                color: black;
+                padding: 15px 30px;
+                background-color: transparent;
+                border-color: black;
+            }
+            #TopMenu>li>.up {
+                color: white;
+                padding: 15px 20px;
+                background-color: #11AA04;
+                border-color: transparent;
+            }
+
+.background {
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+}

@@ -2,31 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>WeAreDevs</title>
 </head>
 
 <body>
-    <div id="Container">
-        <header>
-            <div id="Logo">
-                <a href="../page/index.html">
-                    <h1>WeAreDevs</h1>
+    <header>
+        <nav class="navbar">
+            <a href="../page/index.html" class="navbar-logo">WeAreDevs</a>
+            <div class="navbar-links">
+                <a href="signIn.html" class="button navbar-login">
+                    <span class="button-text">로그인</span>
+                </a>
+                <a href="signUp.html" class="button navbar-signup">
+                    <span class="button-text">회원가입</span>
                 </a>
             </div>
-            <nav>
-                <ul id="TopMenu">
-                    <li><a href="sign/up.html" class="sign up">회원가입</a></li>
-                    <li><a href="sign/in.html" class="sign in">로그인</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <img class="background" src="../img/Background.jpeg" alt="Background">
-        </main>
-    </div>
+        </nav>
+    </header>
+    <main>
+        <div class="background-container">
+            <img class="background-image" src="../img/index/background.png" alt="Background">
+        </div>
+        <div class="text-container">
+            <div class="sub-text">기초지식부터 고급지식까지</div>
+            <div class="main-text">
+                <span class="highlight">
+                    <img class="arrow begin" src="../img/index/arrowBegin.png" alt="Arrow Begin">
+                    개발자
+                </span>들만의
+            </div>
+            <div class="main-text">
+                특별한 장소, WeAreDevs
+            </div>
+        </div>
+        <img class="arrow end" src="../img/index/arrowEnd.png" alt="Arrow End">
+    </main>
 </body>
 
 </html>

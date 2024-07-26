@@ -8,11 +8,12 @@ body {
 header {
     width: 100%;
     background-color: #fff;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ddd;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -21,6 +22,7 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     height: 84px;
+    box-sizing: border-box;
 }
 
 .navbar-logo {
@@ -31,9 +33,62 @@ header {
     text-decoration: none;
 }
 
+.navbar-search {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    padding: 0 60px;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-input:focus {
+    color: #000;
+    background-color: #fff;
+}
+
+.search-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.navbar-search:hover .search-icon,
+.search-input:focus~.search-icon {
+    color: #5191f1;
+}
+
 .navbar-links {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .button {
@@ -45,15 +100,16 @@ header {
     border-radius: 10px;
     text-decoration: none;
     margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-login {
+.navbar-menu {
     background-color: #fff;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     color: #000;
 }
 
-.navbar-signup {
+.navbar-write {
     background-color: #11aa04;
     color: #fff;
 }
@@ -62,4 +118,135 @@ header {
     font-size: 20px;
     line-height: 56px;
     font-weight: bold;
+}
+
+.navbar-menu:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar-write:hover {
+    background-color: #0f8d03;
+}
+
+.main-content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    padding: 103px 20px 20px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post-summary {
+    margin-bottom: 40px;
+}
+
+.summary-title {
+    font-size: 40px;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.summary-count {
+    font-size: 27px;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.post {
+    position: relative;
+    width: 100%;
+    max-width: 807px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.post-author,
+.post-views,
+.post-comments {
+    font-size: 16px;
+    color: #666;
+}
+
+.post-title {
+    font-size: 35px;
+    color: #5191f1;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.post-content {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.post-footer {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar-logo {
+        font-size: 24px;
+    }
+
+    .navbar-search {
+        max-width: calc(100% - 150px);
+    }
+
+    .navbar-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .button {
+        width: auto;
+        margin-left: 5px;
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        padding: 103px 10px 20px;
+    }
+
+    .summary-title {
+        font-size: 32px;
+    }
+
+    .summary-count {
+        font-size: 24px;
+    }
+
+    .post-title {
+        font-size: 30px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
 }

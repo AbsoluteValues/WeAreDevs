@@ -8,11 +8,12 @@ body {
 header {
     width: 100%;
     background-color: #fff;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ddd;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -45,11 +46,12 @@ header {
     border-radius: 10px;
     text-decoration: none;
     margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-login {
     background-color: #fff;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     color: #000;
 }
 
@@ -62,6 +64,14 @@ header {
     font-size: 20px;
     line-height: 56px;
     font-weight: bold;
+}
+
+.navbar-login:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar-signup:hover {
+    background-color: #0f8d03;
 }
 
 main {

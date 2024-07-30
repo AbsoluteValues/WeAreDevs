@@ -9,10 +9,6 @@ header {
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,11 +72,11 @@ header {
 
 main {
     padding-top: 84px;
+    padding-bottom: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 84px);
 }
 
 .signup-container {

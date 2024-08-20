@@ -18,7 +18,6 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     height: 84px;
-    box-sizing: border-box;
 }
 
 .navbar-logo {
@@ -26,19 +25,18 @@ header {
     line-height: 56px;
     font-weight: bold;
     color: #000;
-    margin-right: 10px;
 }
 
 main {
-    padding-top: 84px;
-    padding-bottom: 84px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.report-container {
+.search-container {
     width: 100%;
     max-width: 450px;
     padding: 30px;
@@ -51,7 +49,7 @@ main {
     position: relative;
 }
 
-.report-title {
+.search-title {
     font-size: 28px;
     line-height: 36px;
     color: #000;
@@ -65,7 +63,15 @@ main {
     text-align: left;
 }
 
-.content {
+.form-label {
+    font-size: 16px;
+    color: #000;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-input {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -74,7 +80,6 @@ main {
     box-sizing: border-box;
     margin-bottom: 5px;
     transition: border-color 0.3s;
-    resize: none;
 }
 
 .form-input:focus {

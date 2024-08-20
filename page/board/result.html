@@ -13,14 +13,24 @@
     <header>
         <nav class="navbar">
             <a href="../board/main.html" class="navbar-logo">WeAreDevs</a>
-            <div class="navbar-search">
-                <input type="text" placeholder="검색하기" class="search-input" value="개발자">
-                <img src="/img/board/searchIcon.png" alt="Search Icon" class="search-icon">
-            </div>
+            <form name="form" onsubmit="return false">
+                <div class="navbar-search">
+                    <input type="text" autocomplete="off" name="search" value="개발자"
+                        onkeypress="if (event.keyCode==13) { fake(form.search.value); }" placeholder="검색하기"
+                        class="search-input">
+                    <img src="/img/board/searchIcon.png" alt="Search Icon" class="search-icon">
+                </div>
+            </form>
             <div class="navbar-links">
-                <a href="#" class="button navbar-menu">
+                <div class="button navbar-menu">
                     <span class="button-text">메뉴</span>
-                </a>
+                    <div class="dropdown-menu">
+                        <a href="../index.html" class="dropdown-item">로그아웃</a>
+                        <a href="../user/modify.html" class="dropdown-item">정보수정</a>
+                        <a href="../user/delete.html" class="dropdown-item">회원탈퇴</a>
+                        <a href="../admin/manage.html" class="dropdown-item">관리자</a>
+                    </div>
+                </div>
                 <a href="../board/write.html" class="button navbar-write">
                     <span class="button-text">작성하기</span>
                 </a>
@@ -33,6 +43,8 @@
             <div class="summary-count">0개</div>
         </section>
     </main>
+    <script src="/js/search.js"></script>
+
 </body>
 
 </html>

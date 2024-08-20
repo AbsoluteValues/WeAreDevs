@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/css/admin/report.css">
+    <link rel="stylesheet" href="/css/admin/manage.css">
     <title>WeAreDevs</title>
 </head>
 
@@ -13,14 +13,16 @@
     <header>
         <nav class="navbar">
             <a href="../board/main.html" class="navbar-logo">WeAreDevs</a>
-            <div class="navbar-search">
-                <input type="text" placeholder="검색하기" class="search-input">
-                <img src="/img/board/searchIcon.png" alt="Search Icon" class="search-icon">
-            </div>
             <div class="navbar-links">
-                <a href="#" class="button navbar-menu">
+                <div class="button navbar-menu">
                     <span class="button-text">메뉴</span>
-                </a>
+                    <div class="dropdown-menu">
+                        <a href="../admin/searchPunishment.html" class="dropdown-item">제재</a>
+                        <a href="../admin/searchModify.html" class="dropdown-item">수정</a>
+                        <a href="../admin/searchDelete.html" class="dropdown-item">탈퇴</a>
+                        <a href="../board/main.html" class="dropdown-item">게시판</a>
+                    </div>
+                </div>
                 <a href="../board/write.html" class="button navbar-write">
                     <span class="button-text">작성하기</span>
                 </a>
@@ -34,7 +36,7 @@
         </section>
         <section class="post">
             <div class="post-header">
-                <span class="post-author">닉네임 · 1분전</span>
+                <span class="post-author">김신고자 · 1분전</span>
             </div>
             <h2 class="post-title">신고하는 글 제목</h2>
             <p class="post-content">신고 내용</p>

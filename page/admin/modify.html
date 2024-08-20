@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/css/admin/modify.css">
+    <title>WeAreDevs</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../board/main.html" class="navbar-logo">WeAreDevs</a>
+        </nav>
+    </header>
+    <main>
+        <div class="modify-container">
+            <h1 class="modify-title">회원정보 수정</h1>
+
+            <section class="form-section">
+                <label for="nickname" class="form-label">닉네임</label>
+                <input type="text" id="nickname" class="form-input" placeholder="최대 8자리" value="홍길동">
+                <p class="error-message">닉네임을 입력해주세요.</p>
+            </section>
+
+            <section class="form-section">
+                <label for="email" class="form-label">이메일</label>
+                <input type="email" id="email" class="form-input" placeholder="example@gmail.com"
+                    value="hong@gmail.com">
+                <p class="error-message">올바른 이메일을 입력해주세요.</p>
+            </section>
+
+            <a href="../admin/manage.html" class="submit-button">확인</a>
+            <a href="../admin/manage.html" class="cancel-button">취소</a>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/css/detail/content.css">
+    <title>WeAreDevs</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../board/main.html" class="navbar-logo">WeAreDevs</a>
+            <form name="form" onsubmit="return false">
+                <div class="navbar-search">
+                    <input type="text" autocomplete="off" name="search"
+                        onkeypress="if (event.keyCode==13) { fake(form.search.value); }" placeholder="검색하기"
+                        class="search-input">
+                    <img src="/img/searchIcon.png" alt="Search Icon" class="search-icon">
+                </div>
+            </form>
+            <div class="navbar-links">
+                <div class="button navbar-menu">
+                    <span class="button-text">메뉴</span>
+                    <div class="dropdown-menu">
+                        <a href="../index.html" class="dropdown-item">로그아웃</a>
+                        <a href="../user/modify.html" class="dropdown-item">정보수정</a>
+                        <a href="../user/delete.html" class="dropdown-item">회원탈퇴</a>
+                        <a href="../admin/manage.html" class="dropdown-item">관리자</a>
+                    </div>
+                </div>
+                <a href="../board/write.html" class="button navbar-write">
+                    <span class="button-text">작성하기</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div>
+                <p class="meta-info">10분전 · 조회 30</p>
+                <h2>제목제목</h2>
+                <p class="author">닉네임</p>
+            </div>
+            <p class="content">내용내용</p>
+            <div class="reactions">
+                <span>좋아요 10</span>
+                <span>싫어요 0</span>
+            </div>
+            <img src="/img/detail/menu.png" alt="Menu Icon" class="menu-icon">
+        </article>
+
+        <section class="comments">
+            <h3>댓글 2</h3>
+            <form class="comment-form">
+                <textarea placeholder="댓글 남기기"></textarea>
+                <button type="submit">댓글 등록</button>
+            </form>
+            <ul class="comment-list">
+                <li>
+                    <p class="author">익명</p>
+                    <p class="content">화이팅...!</p>
+                    <p class="timestamp">6분전</p>
+                    <img src="/img/detail/menu.png" alt="Menu Icon" class="menu-icon">
+                </li>
+                <li>
+                    <img src="/img/detail/arrow.png" alt="Arriow Icon" class="arrow-icon">
+                    <p class="author">이름</p>
+                    <p class="content">감사합니다</p>
+                    <p class="timestamp">3분전</p>
+                    <img src="/img/detail/menu.png" alt="Menu Icon" class="menu-icon">
+                </li>
+            </ul>
+        </section>
+
+        <section class="reply-form">
+            <img src="/img/detail/arrow.png" alt="Arrow Icon" class="arrow-icon">
+            <input type="text" value="고맙습니다">
+            <button type="submit">덧글 등록</button>
+        </section>
+    </main>
+    <script src="/js/search.js"></script>
+</body>
+
+</html>
